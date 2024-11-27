@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.head{
+    color: rgb(9, 83, 58);
+    font-family: monospace;
+}
+
+#intro{
+    background-image: url("./images/dg\ bmi-1.jpg");
+}
+.input-div{
+    width: 50% !important;
+}
+footer{
+    background-color: rgb(44, 42, 42);
+}
+
+@media (max-width:320px){
+    .input-div{
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <div>
+        <h1 class="text-center mt-5 head fw-bold display-2">Body Mass Index</h1>
+        <div class="mt-5 p-3 container shadow-lg" id="intro">
+            <h4 class="fw-bold">What is Body Mass Index ?</h4>
+            <p class="mt-2 fw-medium">Body Mass Index (BMI) is a numerical value derived from a person's weight and
+                height, commonly used to assess whether a person has a healthy body weight relative to their height. It
+                is a simple screening tool to classify individuals into weight categories, such as underweight, normal
+                weight, overweight, and obesity.</p>
+        </div>
+
+        <div class="mt-5 container p-3 shadow-lg bg-dark">
+            <h2 class="text-center fw-bold text-white head mt-5">BMI Calculator</h2>
+            <div class="row container p-2 d-flex justify-content-center align-items-center flex-wrap">
+                <div class=" col-12 col-sm-6">
+                    <img class="img-fluid" src="./images/bmi-img1-removebg-preview (1).png" alt="no-image">
+                </div>
+                <div class="container p-3 col-12 col-sm-6">
+                    <div class="text-center mb-3">
+                        <label for="weightInput" class="fw-bold text-white">Weight (in kgs) :</label>
+                        <div class="container mt-3 input-div">
+                            <input type="text" class="rounded-3 p-2" id="weightInput" oninput="checkWeight()">
+                            <p class="text-danger fs-6 mt-2" id="alertMessage"></p>
+                        </div>
+                    </div>
+                    <div class="text-center mb-3">
+                        <label for="heightInput" class="fw-bold text-white">Height (in cms) : </label>
+                        <div class="container mt-3 input-div">
+                            <input type="text" class="rounded-3 p-2" id="heightInput" oninput="checkHeight()">
+                            <p class="text-danger fs-6 mt-2" id="alertMessage1"></p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <label for="bmi" class="fw-bold text-white">BMI : </label>
+                        <div class="container mt-3 input-div">
+                            <input type="text" class="rounded-3 p-2" id="bmi" readonly>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button class="btn btn-primary" onclick="calculateBMI()">Calculate BMI</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container p-4" id="analysis">
+                
+            </div>
+        </div>
+
+        <div class="mt-5 container shadow-lg p-3">
+            <h3 class="fw-bold head my-3">BMI Categories</h3>
+            <div class="container bg-danger p-2 text-white fs-4 fw-medium mb-3 rounded">BMI &#60; 18.5: Underweight.</div>
+            <div class="container bg-warning p-2 text-white fs-4 fw-medium rounded mb-3">BMI 18.5 – 24.9: Normal weight.</div>
+            <div class="container bg-success p-2 text-white fs-4 fw-medium rounded mb-3">BMI 25 – 29.9: Overweight.</div>
+            <div  class="container bg-primary p-2 text-white fs-4 fw-medium rounded">BMI ≥ 30: Obese.</div>
+        </div>
+        <footer class="mt-5">
+            <div class="p-3">
+                <p class="text-white fs-6 text-center">Copyright @ 2024 All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script src="./main.js"></script>
+
+</html>
